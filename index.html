@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
   <link rel="SHORTCUT ICON" href="assets/tv_tbg.ico">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
 
 
@@ -22,7 +24,7 @@
       border: 0;
       font-size: 11px !important;
       letter-spacing: 4px;
-      opacity: 0.9;
+      /*opacity: 0.9;*/
       border-radius: 0;
   }
     .navbar li a, .navbar .navbar-brand { 
@@ -39,9 +41,7 @@
       border-color: transparent;
   }
 
-    body, html {
-      background-color:   #EEEEEE !important;
-  }
+    
     #popUpWindow{
     background: #0b98de; 
   }
@@ -145,7 +145,7 @@
           </div>
       </div>
 
-      <div class="item">
+      <div class="item img-responsive">
         <img src="assets/venom.jpg" alt="Venom" style="width:100%;">
         <div class="carousel-caption">
         <h3>Venom</h3>
@@ -154,7 +154,7 @@
       </div>
     
       <div class="item">
-        <img src="assets/first-man.png" alt="First Man" style="width:100%;">
+        <img src="assets/first-man.jpg" alt="First Man" style="width:100%;">
           <div class="carousel-caption">
             <h3>First Man</h3>
             <p>Uses a personal focus to fuel a look back at a pivotal moment in human history - and takes audiences on a soaring dramatic journey along the way.</p>
@@ -174,5 +174,25 @@
   </div>
 </div>
 
+<!-- Displaying the movies -->
+<div id="movie-display">
+  <div class="container">
+    <div class="row">
+      <div class="genreLabel">
+        <h1 id="movieGenreLabel" class="hdr1 retroshadow"></h1></div>
+      <!-- We need the h1 to change accordingly depending on what was clicked. -->
+      <div id="movie-grid">
+        
+        <!-- Jquery get us the movie posters! Need a place to put the poster images -->
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br>
+<div class="footer">
+  Designed and Developed by Sarvesh Shinde<br>
+  An Open Source Project<br>
+  <a href="https://github.com/illitus/Movie-Buzz">Github</a>
+</div>
 </body>
 </html>
