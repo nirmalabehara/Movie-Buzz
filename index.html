@@ -20,7 +20,7 @@
   <style type="text/css">
     
     .navbar {
-      font-family: sans-serif;
+      font-family: 'Nunito',sans-serif;
       margin-bottom: 0;
       background-color: #0b98de;
       border: 0;
@@ -211,19 +211,34 @@
       <h1 align="middle" class="header_logo">Search Your Favourite Movies</h1>
     <br><br>
   </div>
-  <form class="form-group" style="align-items: center;">
+  <form class="searchForm" style="align-items: center;">
     <br><br><br>
     <div id="namer">
-      <div id="namer-input">
-        <input type="text" name="namername" class="form-control">
+      <div id="namer-input" class="form-group">
+        <input id="searchMovieNeWindowxfxInput" type="text" name="namername" class="form-control">
       </div>
       <br>
       <div class="search-btn" align="middle">
-        <button>BUZZ!</button>
+        <button type="submit">BUZZ!</button>
       </div>
     </div>
   </form>
-  <br><br>
+
+
+  <!-- Displaying the movies -->
+<div id="search-display">
+  <div class="container">
+    <div class="row">
+      <div class="genreLabel">
+        <h1 id="searchLabel" class="hdr1 insetshadow"></h1></div>
+      <!-- We need the h1 to change accordingly depending on what was clicked. -->
+      <div id="search-grid">    
+        <!-- Jquery get us the movie posters! Need a place to put the poster images -->
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
 
 
@@ -241,7 +256,11 @@
     </div>
   </div>
 </div>
+
+
+
   
+
 <footer>
   Designed and Developed by Sarvesh Shinde<br>
   An Open Source Project<br>

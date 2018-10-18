@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function() {
   // The base url for all API calls
   var apiBaseURL = 'https://api.themoviedb.org/3/';
@@ -239,11 +236,11 @@ $(document).ready(function() {
   searchMovies();
   //reference entire search form
   $('.searchForm').submit(function(event) {
-    $('#movie-grid').html('');
+    $('#search-grid').html('');
     event.preventDefault();
     //search term is only concerned with what the user inputted
     //Get input with .val();
-    searchTerm = $('.form-control').val();
+    searchTerm = $('#searchMovieNeWindowxfxInput').val();
     searchMovies();
   });
 
@@ -258,7 +255,7 @@ $(document).ready(function() {
         var thisMovieUrl = apiBaseURL + 'movie/' + dataRes + '/videos?api_key=' + apiKey;
 
         $.getJSON(thisMovieUrl, function(movieKey) {
-          // console.log(movieKey)
+          console.log(movieKey)
           var poster = imageBaseUrl + 'w300' + movieSearchResults.results[i].poster_path;
           var title = movieSearchResults.results[i].original_title;
           var releaseDate = movieSearchResults.results[i].release_date;
@@ -268,11 +265,11 @@ $(document).ready(function() {
           var youtubeLink = 'https://www.youtube.com/watch?v=' + youtubeKey;
           var searchResultsHTML = '';
           searchResultsHTML += '<div class="col-sm-3 col-md-3 col-lg-3 eachMovie">';
-          searchResultsHTML += '<button type="button" class="btnModal" data-toggle="modal" data-target="#exampleModal' + i + '" data-whatever="@' + i + '">' + '<img src="' + poster + '"></button>';
+          searchResultsHTML += '<button type="button" class="searchbtnModal" data-toggle="modal" data-target="#exampleModal' + i + '" data-whatever="@' + i + '">' + '<img src="' + poster + '"></button>';
           searchResultsHTML += '<div class="modal fade" id="exampleModal' + i + '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">';
           searchResultsHTML += '<div class="modal-dialog" role="document">';
           searchResultsHTML += '<div class="modal-content col-sm-12 col-lg-12">';
-          searchResultsHTML += '<div class="col-sm-6 moviePosterInModal">';
+          searchResultsHTML += '<div class="col-sm-6 moviePosterInModal" style="vertical-align: middle;">';
           searchResultsHTML += '<a href="' + youtubeLink + '"><img src="' + poster + '"></a>';
           searchResultsHTML += '</div><br>'; //close trailerLink
           searchResultsHTML += '<div class="col-sm-6 movieDetails">';
@@ -281,22 +278,22 @@ $(document).ready(function() {
           searchResultsHTML += '<div class="release">Release Date: ' + releaseDate + '</div><br>';
           searchResultsHTML += '<div class="overview">' + overview + '</div><br>';
           searchResultsHTML += '<div class="rating">Rating: ' + voteAverage + '/10</div><br>';
-          searchResultsHTML += '<div class="col-sm-3 btn btn-primary">8:30 AM' + '</div>';
-          searchResultsHTML += '<div class="col-sm-3 btn btn-primary">10:00 AM' + '</div>';
-          searchResultsHTML += '<div class="col-sm-3 btn btn-primary">12:30 PM' + '</div>';
-          searchResultsHTML += '<div class="col-sm-3 btn btn-primary">3:00 PM' + '</div>';
-          searchResultsHTML += '<div class="col-sm-3 btn btn-primary">4:10 PM' + '</div>';
-          searchResultsHTML += '<div class="col-sm-3 btn btn-primary">5:30 PM' + '</div>';
-          searchResultsHTML += '<div class="col-sm-3 btn btn-primary">8:00 PM' + '</div>';
-          searchResultsHTML += '<div class="col-sm-3 btn btn-primary">10:30 PM' + '</div>';
+          // searchResultsHTML += '<div class="col-sm-3 btn btn-primary">8:30 AM' + '</div>';
+          // searchResultsHTML += '<div class="col-sm-3 btn btn-primary">10:00 AM' + '</div>';
+          // searchResultsHTML += '<div class="col-sm-3 btn btn-primary">12:30 PM' + '</div>';
+          // searchResultsHTML += '<div class="col-sm-3 btn btn-primary">3:00 PM' + '</div>';
+          // searchResultsHTML += '<div class="col-sm-3 btn btn-primary">4:10 PM' + '</div>';
+          // searchResultsHTML += '<div class="col-sm-3 btn btn-primary">5:30 PM' + '</div>';
+          // searchResultsHTML += '<div class="col-sm-3 btn btn-primary">8:00 PM' + '</div>';
+          // searchResultsHTML += '<div class="col-sm-3 btn btn-primary">10:30 PM' + '</div>';
           searchResultsHTML += '</div>'; //close movieDetails
           searchResultsHTML += '</div>'; //close modal-dialog
           searchResultsHTML += '</div>'; //close modal
           searchResultsHTML += '</div>'; //close off each div
-          // console.log(searchResultsHTML)
-          $('#movie-grid').append(searchResultsHTML);
+          console.log(searchResultsHTML)
+          $('#search-grid').append(searchResultsHTML);
           //Label will be whatever user input was
-          $('#movieGenreLabel').html(searchTerm);
+          $('#searchLabel').html('"' + searchTerm + '"');
         })
       }
     })

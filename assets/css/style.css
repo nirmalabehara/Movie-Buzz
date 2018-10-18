@@ -20,6 +20,12 @@ button.btnModal{
     border-radius: 5px;
 }
 
+button.searchbtnModal{
+    background-color: transparent;
+    border: transparent;
+    border-radius: 5px;
+}
+
 img {
     margin-top: 10px; 
     margin-bottom: 10px;
@@ -45,6 +51,17 @@ img {
       7px 7px 0px rgba(0, 0, 0, 0.2);
 
  }
+
+ @import url('https://fonts.googleapis.com/css?family=Pacifico');
+ .insetshadow {
+  font-family: 'Pacifico', cursive;
+  color: #1976D2;
+    /*background-color: #d5d5d5;*/
+  letter-spacing: .05em;
+  text-shadow: 
+      4px 4px 0px gold, 
+      7px 7px 0px rgba(0, 0, 0, 0.2);
+}
 
  .movieName {
  	font-size: 20px;
@@ -116,7 +133,7 @@ small a {
  outline: 1;
 
  background: transparent;
-	color: gold;
+	color: #1976D2;
 }
 
 .search-btn button {
