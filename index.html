@@ -13,7 +13,8 @@
   <link rel="SHORTCUT ICON" href="assets/tv_tbg.ico">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet"> 
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
 
 
   <style type="text/css">
@@ -56,9 +57,15 @@
     #popUpWindow1{
     background: #0b98de; 
   }
+
+  ::placeholder {
+  color: #1976D2;
+  }
+
   </style>
 </head>
 <body>
+<!-- <div class="container" style="background-color: white"> -->
 <!-- navbar-fixed-top -->
 <nav class="navbar navbar-default ">
   <div class="container-fluid">
@@ -186,22 +193,42 @@
   </div>
 </div>
 
-<br><br>
 
-<div align="middle">
-      <div class='search-box'>
-        <form class='search-form'>
-          <input class='form-control' placeholder='Trending Today: Venom, A Star is Born...' type='text'>
-          <button class='btn btn-link search-btn'>
-            <i class='glyphicon glyphicon-search'></i>
-          </button>
-        </form>
+
+<!-- <div align="middle">
+  <div class='search-box'>
+    <form class='search-form'>
+      <input class='form-control' placeholder='Trending Today: Venom, A Star is Born...' type='text'>
+      <button class='btn btn-link search-btn'>
+        <i class='glyphicon glyphicon-search'>Search</i>
+      </button>
+    </form>
   </div>
+</div> -->
+<div style="background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png);" align="middle">
+  <div class="heading">
+    <br>
+      <h1 align="middle" class="header_logo">Search Your Favourite Movies</h1>
+    <br><br>
+  </div>
+  <form class="form-group" style="align-items: center;">
+    <br><br><br>
+    <div id="namer">
+      <div id="namer-input">
+        <input type="text" name="namername" class="form-control">
+      </div>
+      <br>
+      <div class="search-btn" align="middle">
+        <button>BUZZ!</button>
+      </div>
+    </div>
+  </form>
+  <br><br>
 </div>
 
 
 <!-- Displaying the movies -->
-<div id="movie-display">
+<div id="movie-display" style="background-color: #EEEEEE">
   <div class="container">
     <div class="row">
       <div class="genreLabel">
@@ -214,12 +241,13 @@
     </div>
   </div>
 </div>
-<br><br><br>
-<div class="footer">
+  
+<footer>
   Designed and Developed by Sarvesh Shinde<br>
   An Open Source Project<br>
   <a href="https://github.com/illitus/Movie-Buzz">Github</a>
-</div>
+</footer>
+<!-- </div> -->
 
 </body>
 </html>

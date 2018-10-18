@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function() {
   // The base url for all API calls
   var apiBaseURL = 'https://api.themoviedb.org/3/';
