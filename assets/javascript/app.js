@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var apiBaseURL = 'https://api.themoviedb.org/3/';
-  var apiKey = "28e7691b28199415eec6fd8d3e1ffd18"
+  var apiKey = "2ec56988da89f63a91431a311d329aa7"
 
   var imageBaseUrl = 'https://image.tmdb.org/t/p/';
 
