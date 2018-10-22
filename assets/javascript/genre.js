@@ -87,7 +87,6 @@ $(document).ready(function() {
   $('#horror').click(function() {
   	$('#genre-grid').html('');
     getMoviesByGenre(27);
-    $('#genre-grid').html(genreHTML);
     $('#movieGenreLabel').html("Horror");
   });
   $('#music').click(function() {
