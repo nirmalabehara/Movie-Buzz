@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Catalog - Movie Buzz</title>
-</head>
+
+	<title>Now Playing - Movie Buzz</title>
 
 <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
 <script>
@@ -144,14 +144,15 @@
     background: #0b98de; 
   }
 
-  body, html {
-      background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png);
-      overflow: none;
+  ::placeholder {
+  color: #1976D2;
   }
 
   </style>
-<body style="background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png);">
-
+</head>
+<body>
+<!-- <div class="container" style="background-color: white"> -->
+<!-- navbar-fixed-top -->
 <nav class="navbar navbar-default ">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -174,41 +175,135 @@
   </div>
 </nav>
 
-<div  align="middle" style="background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png);">
-  <div class="heading">
-    <br>
-      <h1 align="middle" class="header_logo">Search Your Favourite Movies</h1>
-    <br><br>
-  </div>
-  <form class="searchForm" style="align-items: center;">
-    <br><br><br>
-    <div id="namer">
-      <div id="namer-input" class="form-group">
-        <input id="searchMovieNeWindowxfxInput" type="text" name="namername" class="form-control">
-      </div>
-      <br>
-      <div class="search-btn" align="middle">
-        <button type="submit">BUZZ!</button>
+<div class="modal fade" id="popUpWindow">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title" align="middle">Sign In</h3>
+        </div>
+        <!-- body -->
+        <!-- <div class="modal-header">
+          <form role="form">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email"/>
+              <br>
+              <input type="password" class="form-control" placeholder="Password" />
+            </div>
+          </form> -->
+          <div id="firebaseui-auth-container"></div>
+        </div>
+        
+        <!-- footer -->
+        <!-- <div class="modal-footer">
+          <button class="btn btn-primary btn-block">Sign In</button>
+        </div> -->
+        
       </div>
     </div>
-  </form>
 
-   <!-- Displaying the movies -->
-<div id="search-display" style="background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png);">
+  <div class="modal fade" id="signOutWindow">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title" align="middle">Sign Out</h3>
+        </div>
+        <br>
+        <h4 align="middle">Are you sure you want to sign out?</h4>
+        <br>
+
+        <!-- body -->
+        <div class="modal-header" align="center">
+          <button class="btn btn-primary btn-block" style="width: inherit;" id="signoutBtn">Sign Out</button>
+<!--           <form role="form">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email"/>
+              <br>
+              <input type="password" class="form-control" placeholder="Password" />
+            </div>
+          </form> -->
+          <!-- <div id="firebaseui-auth-container"></div> -->
+        </div>
+        
+        <!-- footer -->
+        <!-- <div class="modal-footer">
+          <button class="btn btn-primary btn-block" style="width: inherit;">Sign Out</button>
+        </div> -->
+        
+      </div>
+    </div>
+  </div>
+
+<!-- <div class="modal fade" id="popUpWindow1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Sign Up</h3>
+        </div>
+        
+        <div class="modal-header">
+          <form role="form">
+            <div class="form-group">
+              <input type="name" class="form-control" placeholder="Name">
+              <br>
+              <input type="email" class="form-control" placeholder="Email"/>
+              <br>
+              <input type="password" class="form-control" placeholder="Password" />
+            </div>
+          </form>
+        </div>
+        
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-block">Sign Up</button>
+        </div>
+        
+      </div>
+    </div>
+  </div> -->
+
+
+<!-- <div align="middle">
+  <div class='search-box'>
+    <form class='search-form'>
+      <input class='form-control' placeholder='Trending Today: Venom, A Star is Born...' type='text'>
+      <button class='btn btn-link search-btn'>
+        <i class='glyphicon glyphicon-search'>Search</i>
+      </button>
+    </form>
+  </div>
+</div> -->
+
+
+<!-- Displaying the movies -->
+<div id="movie-display" style="background-color: #EEEEEE">
   <div class="container">
     <div class="row">
       <div class="genreLabel">
-        <h1 id="searchLabel" class="hdr1 insetshadow"></h1></div>
+        <h1 id="movieGenreLabel" class="hdr1 retroshadow"></h1></div>
       <!-- We need the h1 to change accordingly depending on what was clicked. -->
-      <div id="search-grid">    
+      <div id="movie-grid">
+        
         <!-- Jquery get us the movie posters! Need a place to put the poster images -->
       </div>
     </div>
   </div>
 </div>
 
-</div>
 
+
+  
+
+<footer>
+  Designed and Developed by Sarvesh Shinde<br>
+  An Open Source Project<br>
+  <a href="https://github.com/illitus/Movie-Buzz">Github</a>
+</footer>
+<!-- </div> -->
 
 </body>
 </html>

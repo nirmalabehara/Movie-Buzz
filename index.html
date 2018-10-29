@@ -30,6 +30,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet"> 
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
 
   <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
@@ -135,7 +136,6 @@
     .navbar-default .navbar-toggle {
       border-color: transparent;
   }
-
     
     #popUpWindow{
     background: #0b98de; 
@@ -144,8 +144,40 @@
     background: #0b98de; 
   }
 
-  ::placeholder {
-  color: #1976D2;
+    .wrapper{
+      background:#f9feff;
+      box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+      padding: 0px;
+      margin-top: 20px;
+      font-family: 'Raleway', sans-serif;
+  }
+
+    .wrapper > *{
+      padding: 0px;
+  }
+
+    .wrapper > h2{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+  .sizeimg {
+    width: 100%;
+    padding: 0px;
+    margin-top: 0px;
+  }
+  .date {
+    opacity: 0.65;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .desc {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   </style>
@@ -156,12 +188,13 @@
 <nav class="navbar navbar-default ">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <div style="font-family: 'Montserrat', sans-serif; font-size: 30px; letter-spacing: -2px; color: white;">Movie Buzz</div>
       </a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <!-- <li class="active"><a href="#">Home</a></li> -->
+      <li><a href="nowplaying.html">Now Playing</a></li>
       <li><a href="search.html">Catalog</a></li>
       <li><a href="toprated.html">Top Charts</a></li>
       <li><a href="genre.html">Genre-lize</a></li>
@@ -326,68 +359,65 @@
     </form>
   </div>
 </div> -->
-<div style="background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png);" align="middle">
-  <div class="heading">
+<div class="container">
+<br><br>
+  <div class="wrapper">
+    <img src="https://www.tynesidecinema.co.uk/storage/app/uploads/public/59f/c06/ae2/59fc06ae29b2f658747393.jpg" class="sizeimg">
+    <h2>Die Hard returning to theaters for 30th anniversary</h2>
+    <p class="date">October 25, 2018</p>
     <br>
-      <h1 align="middle" class="header_logo">Search Your Favourite Movies</h1>
-    <br><br>
+    <p class="desc">It’s getting close to the most wonderful time of year, so what better way to celebrate than to watch the perfect Christmas movie on a big screen? Fans can debate forever whether or not Die Hard actually counts as a “Christmas movie” per se, but the fact is the iconic Bruce Willis action film turns 30 this year. Fathom Events and Turner Classic Movies are celebrating the big anniversary by bringing Die Hard back to theaters this November.</p>
+    <p class="desc">
+      Die Hard is set to be the next installment in the TCM Big Screen Classics series from Fathom Events and Turner Classic Movies. The action movie will return to theaters for two days only, Nov. 11 and Nov. 14, featuring new pre and post-film commentary by TCM host Ben Mankiewicz. It’s a great opportunity for Brooklyn Nine-Nine fans to finally figure out what all those references are about.
+    </p>
+    <br>
   </div>
-  <form class="searchForm" style="align-items: center;">
-    <br><br><br>
-    <div id="namer">
-      <div id="namer-input" class="form-group">
-        <input id="searchMovieNeWindowxfxInput" type="text" name="namername" class="form-control">
-      </div>
-      <br>
-      <div class="search-btn" align="middle">
-        <button type="submit">BUZZ!</button>
-      </div>
-    </div>
-  </form>
 
+<br><br>
 
-  <!-- Displaying the movies -->
-<div id="search-display">
-  <div class="container">
-    <div class="row">
-      <div class="genreLabel">
-        <h1 id="searchLabel" class="hdr1 insetshadow"></h1></div>
-      <!-- We need the h1 to change accordingly depending on what was clicked. -->
-      <div id="search-grid">    
-        <!-- Jquery get us the movie posters! Need a place to put the poster images -->
-      </div>
-    </div>
+  <div class="wrapper">
+    <img src="https://www.syfy.com/sites/syfy/files/syfywire_blog_post/2018/10/guillermo_del_toro_double_oscars_hero.jpg" class="sizeimg">
+    <h2>Guillermo del Toro Directing ‘Pinocchio’ for Netflix</h2>
+    <p class="date">October 22, 2018 </p>
+    <br>
+    <p class="desc">
+    Fresh off his Oscar win for “The Shape of Water,” Guillermo del Toro is set to make his animated feature film directing debut. Del Toro has received the green light from Netflix to film “Pinocchio,” a stop motion musical version of the classic children’s tale about a puppet who wants to be a real live boy. He will write and produce the film in addition to directing it.
+    </p>
+    <p class="desc">
+     The film will be set in Italy during the 1930s, a particularly fraught historical moment and a time when fascism was on the rise and Benito Mussolini was consolidating control of the country. Production on “Pinocchio” will begin this fall. Del Toro previously set “The Devil’s Backbone” and “Pan’s Labyrinth” against a totalitarian backdrop, although he placed those stories in Franco’s Spain.
+    </p>
+    <br>
   </div>
-</div>
 
-</div>
+<br><br>
 
-
-<!-- Displaying the movies -->
-<div id="movie-display" style="background-color: #EEEEEE">
-  <div class="container">
-    <div class="row">
-      <div class="genreLabel">
-        <h1 id="movieGenreLabel" class="hdr1 retroshadow"></h1></div>
-      <!-- We need the h1 to change accordingly depending on what was clicked. -->
-      <div id="movie-grid">
-        
-        <!-- Jquery get us the movie posters! Need a place to put the poster images -->
-      </div>
-    </div>
+<div class="wrapper">
+    <img src="https://www.awn.com/sites/default/files/styles/original/public/image/featured/1036044-director-patty-jenkins-returning-wonder-woman-sequel.jpg?itok=7ZmQjVPP" class="sizeimg">
+    <h2>‘Wonder Woman 1984’ Pushed Back Seven Months to 2020</h2>
+    <p class="date">October 21, 2018 </p>
+    <br>
+    <p class="desc">
+    Jeff Goldstein, Warner Bros.’ president of domestic distribution, said, “We had tremendous success releasing the first ‘Wonder Woman’ film during the summer so when we saw an opportunity to take advantage of the changing competitive landscape, we did. This move lands the film exactly where it belongs.”
+    </p>
+    <p class="desc">
+     “Wonder Woman 1984” is the eighth installment in the DC Universe, and the fourth movie featuring Gadot’s Wonder Woman. The first pic earned $821.8 million worldwide, including $412.6 million in North America. The movie is the highest-grossing film with a female director, as well as the 25th-highest-grossing movie of all time in North America. Patty Jenkins is returning to direct. The film was originally dated on Dec. 13, 2019, but was moved forward to Nov. 1 to avoid being just a single week ahead of Disney-Lucasfilm’s “Star Wars: Episode IX,” which opens on Dec. 20, 2019. Chris Pine is also back and Kristen Wiig joins as the villainous Cheetah. Gadot and Jenkins are producing along with Charles Roven, Deborah Snyder, Zack Snyder and Stephen Jones.
+    </p>
+    <br>
   </div>
+
+<br><br>
+
 </div>
-
-
 
   
 
 <footer>
-  Designed and Developed by Sarvesh Shinde<br>
-  An Open Source Project<br>
-  <a href="https://github.com/illitus/Movie-Buzz">Github</a>
+  <div class="dev">
+    <p>Designed and Developed by - <a href="aboutme.html">Sarvesh Shinde</a></p>
+  </div>
+  <div class="social">
+    <a href="contact.html" class="linked">Contact Us</a>
+  </div>
 </footer>
-<!-- </div> -->
-
 </body>
 </html>
