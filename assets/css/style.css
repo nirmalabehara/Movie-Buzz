@@ -20,6 +20,10 @@ button.btnModal{
     border-radius: 5px;
 }
 
+.current {
+	color: white;
+}
+
 button.searchbtnModal{
     background-color: transparent;
     border: transparent;
